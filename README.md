@@ -4,13 +4,13 @@ The database you need to recreate the example used in the blog can be found in t
 
 Set the values of the @Query and @RScript variables. You need to set the @Query variable with the string that represents the T-SQL for your input dataset. You also need to set the @RScript variable to hold the R code that will be used to perform the sentiment analysis. The T-SQL script for the @Query variable is as follows:
 
-'''
+```
       SET @Query = 'SELECT [id], [text] FROM [dbo].[SentimentData]'
-'''
+```
 
 It is a simple SELECT statement that grabs the data from the [dbo].[ SentimentData] table needed for our R script. Next, we define the R code needed to score the data. Here is the code:
 
-'''
+```
 SET @RScript = '
               dfInput$text = as.character(dfInput$text)
               sentimentScores <- rxFeaturize(
@@ -20,7 +20,7 @@ SET @RScript = '
               sentimentScores$text <- NULL
               dfOutput <- cbind(dfInput, sentimentScores)
               ‘
-'''
+```
 
 The script is only four lines long because the pre-trained model does the heavy lifting. In the above R script, the first line changes the text field in the dfInput data frame to a character data type. By default, R converts any character-based fields into a data type called a “factor” when creating data frames. Factor fields are used for categorical data. Underneath the hood, the data is stored using a method similar to the dictionary encoding used in DAX (Data Analysis Expressions). Each unique element in the field is replaced with an integer value, and a map is created that maps the index value to the unique element it replaces. This technique is beneficial because integers are more efficient to work with, and have a lower memory footprint than long strings.
 
