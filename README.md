@@ -2,9 +2,9 @@
 
 The database you need to recreate the example used in the blog can be found in the database folder in this repo. The example was done using R but if you want to use Python instead then you need to replace step 3 with the instructions given below:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbspSet the values of the @Query and @RScript variables.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp Set the values of the @Query and @RScript variables.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp ou need to set the @Query variable with the string that represents the T-SQL for your input dataset. You &nbsp;&nbsp;&nbsp;&nbsp;&nbsp lso need to set the @RScript variable to hold the R code that will be used to perform the sentiment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp nalysis. The T-SQL script for the @Query variable is as follows:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp you need to set the @Query variable with the string that represents the T-SQL for your input dataset. You &nbsp;&nbsp;&nbsp;&nbsp;&nbsp also need to set the @RScript variable to hold the R code that will be used to perform the sentiment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp analysis. The T-SQL script for the @Query variable is as follows:
 
 '''
       SET @Query = 'SELECT [id], [text] FROM [dbo].[SentimentData]'
