@@ -1,10 +1,8 @@
 # Sentiment Analysis in Power BI via SQL Server Machine Learning Services 
 
-The database you need to recreate the example used in the blog can be found in the database folder in this repo. The example was done using R but if you want to use Python instead then you need to replace step 3 with the instructions given below:
+The database you need to recreate the example used in the blog can be found in the database folder in this repo. The example was done using R but if you want to use Python instead then you need to replace step 3 with the instructions that follows.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp Set the values of the @Query and @RScript variables.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you need to set the @Query variable with the string that represents the T-SQL for your input dataset. You &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; also need to set the @RScript variable to hold the R code that will be used to perform the sentiment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; analysis. The T-SQL script for the @Query variable is as follows:
+Set the values of the @Query and @RScript variables. You need to set the @Query variable with the string that represents the T-SQL for your input dataset. You also need to set the @RScript variable to hold the R code that will be used to perform the sentiment analysis. The T-SQL script for the @Query variable is as follows:
 
 '''
       SET @Query = 'SELECT [id], [text] FROM [dbo].[SentimentData]'
