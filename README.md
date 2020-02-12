@@ -1,4 +1,4 @@
-# Sentiment Analysis in Power BI via SQL Server Machine Learning Services 
+# Sentiment Analysis in Power BI via SQL Server Machine Learning Services using R and Python 
 
 The database you need to recreate the example used in the blog can be found in the database folder in this repo. The example was done using R but if you want to use Python instead then you need to make sure the the Python version of the pre-trained models are installed. The instructions to install the Python version can be found here. Also you need to replace step 3 in the blog with the instructions that follows.
 
