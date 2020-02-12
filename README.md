@@ -4,7 +4,7 @@ The database you need to recreate the example used in the blog can be found in t
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp Set the values of the @Query and @RScript variables.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp you need to set the @Query variable with the string that represents the T-SQL for your input dataset. You &nbsp;&nbsp;&nbsp;&nbsp;&nbsp also need to set the @RScript variable to hold the R code that will be used to perform the sentiment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp analysis. The T-SQL script for the @Query variable is as follows:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; you need to set the @Query variable with the string that represents the T-SQL for your input dataset. You &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; also need to set the @RScript variable to hold the R code that will be used to perform the sentiment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; analysis. The T-SQL script for the @Query variable is as follows:
 
 '''
       SET @Query = 'SELECT [id], [text] FROM [dbo].[SentimentData]'
